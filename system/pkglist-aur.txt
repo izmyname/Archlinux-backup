@@ -1,0 +1,13 @@
+catppuccin-cursors-mocha
+downgrade
+hypridle-git
+hyprland-git
+hyprlock-git
+hyprpaper-git
+hyprpolkitagent-git
+mpd-notification
+mullvad-vpn-cli
+nnn-git
+tty-clock
+xdg-desktop-portal-hyprland-git
+yay

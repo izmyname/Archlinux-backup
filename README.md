@@ -1,5 +1,4 @@
-# home_backup
-Dotfiles backup.
+##Post-install user setup
 
 <b>After installation, run</b> `systemctl --user enable hypridle.service  hyprpolkitagent.service waybar.service foot-server.service hyprpaper.service`
 

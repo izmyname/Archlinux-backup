@@ -1,0 +1,7 @@
+Login
+
+auto-connect-on
+
+lockdown-mode on
+
+mullvad relay set location [country]
