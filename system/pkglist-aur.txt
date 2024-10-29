@@ -8,6 +8,7 @@ hyprpolkitagent-git
 mpd-notification
 mullvad-vpn-cli
 nnn-git
+openfreebuds
 tty-clock
 xdg-desktop-portal-hyprland-git
 yay
