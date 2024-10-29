@@ -1,4 +1,4 @@
-##Post-install user setup
+<b>Post-install user setup</b>
 
 <b>After installation, run</b> `systemctl --user enable hypridle.service  hyprpolkitagent.service waybar.service foot-server.service hyprpaper.service`
 
