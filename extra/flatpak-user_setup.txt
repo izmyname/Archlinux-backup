@@ -1,5 +1,0 @@
-flatpak remote-modify --user flathub 
-
-MUST-HAVE FLATPAKS:
-
-com.github.tchx84.Flatseal com.github.wwmm.easyeffects it.mijorus.gearlever org.mozilla.firefox org.pipewire.Helvum
