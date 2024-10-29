@@ -1,5 +1,0 @@
-journalctl -u service-name.service -b 
- 
--u --unit 
- 
--b --boot - for the current boot only
