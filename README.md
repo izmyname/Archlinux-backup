@@ -29,5 +29,3 @@ Dotfiles backup.
 `}`
 
 <b>Set wallpaper/lockscreen:</b> ln -sf /path/to/wallpaper.png ~/.local/share/wallpaper, then - reload hyprpaper (mod+shift+r, by default)
-
-<b>Other pkgs (arch repos and aur names):</b> <i>nnn-git tty-clock lsd zoxide duf dua ripgrep bat swayimg mpv mpc mpd trash-cli foot foot-terminfo fuzzel grim slurp hyprpaper hyprlock hypridle cliphist fd mpd-notification hyprpolkitagent</i>
