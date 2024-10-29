@@ -5,6 +5,8 @@ Dotfiles backup.
 
 <b>To enable mpd</b> `mkdir ~/.config/playlists mkdir ~/.local/state/mpd` then `systemctl --user enable mpd.service mpd-notification.service`
 
+<b>To enable cleanup timers</b> `systemctl --user enable emptytrash.timer paccache-local.timer`
+
 <i><b>Note:</b> waybar.service and mpd-notification.service are always force restarted, if stopped. This is a fix to prevent a situation, where both services won't start if Hyprland was exited, then started again, without reboot.</i>
 
 
