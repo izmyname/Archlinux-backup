@@ -1,6 +1,5 @@
 
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop
 image/jpeg=swayimg.desktop
 image/jpg=swayimg.desktop
 image/png=swayimg.desktop
