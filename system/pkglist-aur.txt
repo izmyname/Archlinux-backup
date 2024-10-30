@@ -5,6 +5,7 @@ hyprland-git
 hyprlock-git
 hyprpaper-git
 hyprpolkitagent-git
+hyprsunset-git
 mpd-notification
 mullvad-vpn-cli
 nnn-git
