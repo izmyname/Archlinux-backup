@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+#Temporary script to toggle hyprsunset, untill we get ipc.
+
+if pgrep -x 'hyprsunset' >/dev/null; then
+  killall -e hyprsunset
+else
+  hyprsunset -t 10000 &
+fi
