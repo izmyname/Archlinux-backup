@@ -24,4 +24,4 @@ VIII. as user - yay -Y --devel --save && yay -S --needed - < pkglist-AUR.txt
 
 IX. as user - chmod +x ~/.local/bin/*
 
-X. configure mullvad,setup ufw and create uefi boot entry. Create snapper config
+X. enable services, configure mullvad,setup ufw and create uefi boot entry. Create snapper config
