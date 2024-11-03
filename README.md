@@ -6,8 +6,6 @@
 
 <b>Firefox theme(mocha variant):</b> https://github.com/catppuccin/firefox
 
-<b>Vimium theme(mocha variant):</b> https://github.com/catppuccin/vimium
-
 <b>Enable icons for nnn file manager:</b> inside PKGBUILD add O_NERD=1 under build section.
 
 
