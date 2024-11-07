@@ -1,4 +1,7 @@
 emulate sh -c 'source /etc/profile'
 
 #autostart graphical session from tty1.
-[ "$(tty)" = "/dev/tty1" ] && exec systemctl --user start --wait hyprland-session.service
+if uwsm check may-start && uwsm select; then
+	exec systemd-cat -t uwsm_start uwsm start default
+fi
+
