@@ -10,5 +10,6 @@ mpd-notification
 mullvad-vpn-cli
 nnn-git
 tty-clock
+uwsm
 xdg-desktop-portal-hyprland-git
 yay
