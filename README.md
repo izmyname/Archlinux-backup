@@ -1,7 +1,3 @@
-<b>Post-install user setup</b>
-
-<i><b>Note:</b> waybar.service and mpd-notification.service are always force restarted, if stopped. This is a fix to prevent a situation, where both services won't start if Hyprland was exited, then started again, without reboot.</i>
-
 <b>Theme:</b> <i>catppuccin-mocha</i>
 
 <b>Firefox theme(mocha variant):</b> https://github.com/catppuccin/firefox
