@@ -1,5 +1,6 @@
 [Context]
 sockets=!fallback-x11;!wayland
+devices=dri
 
 [Environment]
 __NV_PRIME_RENDER_OFFLOAD=1
