@@ -208,7 +208,7 @@
         //"scroll-step": 1,
         "format": "{icon}{volume}% ",
         "format-bluetooth": "{icon}{volume}% ",
-        "format-muted": " ",
+        "format-muted": " ",
         "format-icons": {
             "headphones": " ",
             "handsfree": " ",
@@ -231,12 +231,12 @@
 
 "wireplumber": {
     "format": "{icon}{volume}% ",
-    "format-muted": " ",
+    "format-muted": " ",
     "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
     "on-click-right": "flatpak run org.pipewire.Helvum",
     "on-click-middle": "flatpak run com.github.wwmm.easyeffects", 
     "max-volume": 100,
-    "format-icons": [ " ", "  "],
+    "format-icons": [" ", " ", "  "],
 
     "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",           
     "on-click-right": "flatpak run org.pipewire.Helvum",    
