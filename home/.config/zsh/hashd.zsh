@@ -1,8 +1,8 @@
-hash -d mus=$HOME/Music
-hash -d doc=$HOME/Documents
-hash -d web=$HOME/Downloads
-hash -d pic=$HOME/Pictures
-hash -d vid=$HOME/Videos
+hash -d mus=$XDG_MUSIC_DIR
+hash -d doc=$XDG_DOCUMENTS_DIR
+hash -d web=$XDG_DOWNLOAD_DIR
+hash -d pic=$XDG_PICTURES_DIR
+hash -d vid=$XDG_VIDEOS_DIR
 hash -d cfg=$HOME/.config
 hash -d loc=$HOME/.local/share
 hash -d mtp=/run/user/1000/gvfs
