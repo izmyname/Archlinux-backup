@@ -1,6 +1,5 @@
 source $HOME/.config/zsh/config.zsh
 source $HOME/.config/zsh/functions.zsh
-source $HOME/.config/user-dirs.dirs
 source $HOME/.config/zsh/nnn_vars.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/hashd.zsh
