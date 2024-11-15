@@ -1,8 +1,8 @@
-source $HOME/.config/zsh/config.zsh
-source $HOME/.config/zsh/functions.zsh
-source $HOME/.config/zsh/nnn_vars.zsh
-source $HOME/.config/zsh/aliases.zsh
-source $HOME/.config/zsh/hashd.zsh
+#source 
+for conf in "$HOME/.config/zsh/"*.zsh; do
+  source "${conf}"
+done
+unset conf
 
 #zoxide
 eval "$(zoxide init --cmd cd zsh)"
