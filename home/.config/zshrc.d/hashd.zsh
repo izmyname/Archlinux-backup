@@ -8,6 +8,6 @@ hash -d loc=$HOME/.local/share
 hash -d mtp=/run/user/1000/gvfs
 hash -d ext=/run/media
 hash -d opt=$HOME/.local/opt
-hash -d zsh=$HOME/.config/zsh
+hash -d zsh=$HOME/.config/zshrc.d
 hash -d hypr=$HOME/.config/hypr
 hash -d bgs=$HOME/.local/share/backgrounds
