@@ -12,7 +12,6 @@ alias untrash='trash-restore'
 alias purgetrash='trash-empty -f --all-users'
 alias inxi="inxi -c11"
 alias tty-clock='tty-clock -C3 -c -s -n -f "%A %d %B %Y (%Z)"'
-alias mpc="mpc -f '%position%. %Artist% %performer% - %title% (%Album% %date%)'"
 alias nnn='n'
 alias edit=nvim
 alias vim=nvim
