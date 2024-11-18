@@ -1,7 +1,0 @@
-default_view playlist
-full_song_format  %Artist% %performer% - %title% (%Album% %date%)
-playlist_view_key alt-1
-track_view_key alt-2
-artist_view_key alt-3
-genre_view_key alt-4
-playlists_view_key alt-5
