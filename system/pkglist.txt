@@ -102,6 +102,7 @@ translate-shell
 trash-cli
 ttf-dejavu-nerd
 ttf-fira-code
+udiskie
 ufw
 unrar
 unzip
