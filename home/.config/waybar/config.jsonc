@@ -63,7 +63,6 @@
 	"orientation": "inherit",
 	     "modules": [
 		     "bluetooth",
-		    // "pulseaudio",
 		     "wireplumber",
 		     "network"
 
@@ -204,29 +203,10 @@
 	
     },
 
-"pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{icon}{volume}% ",
-        "format-bluetooth": "{icon}{volume}% ",
-        "format-muted": " ",
-        "format-icons": {
-            "headphones": " ",
-            "handsfree": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": [" ", "  "]
-        },
-      	"on-click": "wpctl set-mute @DEFAULT_SINK@ toggle", 
-        "on-click-right": "flatpak run org.pipewire.Helvum",
-	      "on-click-middle": "flatpak run com.github.wwmm.easyeffects", 
-	      "ignored-sinks": ["Easy Effects Sink"]
-    },
-
 "tray": {
         "icon-size": 18,
-        "spacing": 5
+        "spacing": 5,
+        "reverse-direction": true
     },
 
 "wireplumber": {
@@ -247,5 +227,4 @@
       "format": " ",
       "tooltip": false
     }       
-
 }
