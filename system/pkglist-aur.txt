@@ -7,7 +7,7 @@ hyprpaper-git
 hyprpolkitagent-git
 hyprsunset-git
 mpd-notification
-mullvad-vpn-cli
+mullvad-vpn-bin
 nnn-git
 tty-clock
 uwsm
