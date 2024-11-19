@@ -31,10 +31,10 @@
     ],
     "modules-right": [
         "tray",
-        "group/hardware2",
- 	      "group/hardware",    
         "hyprland/language",
-	      "group/indicators"
+	      "group/indicators",
+        "group/hardware2",
+ 	      "group/hardware"  
             ],
 
 
@@ -62,7 +62,7 @@
 "group/indicators":{
 	"orientation": "inherit",
 	     "modules": [
-		     "bluetooth",
+		    // "bluetooth",
 		    // "pulseaudio",
 		     "wireplumber",
 		     "network"
