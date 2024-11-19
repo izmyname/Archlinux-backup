@@ -100,8 +100,8 @@ taskwarrior-tui
 tlp
 translate-shell
 trash-cli
-ttf-dejavu-nerd
 ttf-fira-code
+ttf-firacode-nerd
 udiskie
 ufw
 unrar

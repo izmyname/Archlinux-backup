@@ -21,7 +21,7 @@
 
     to {
         color: @text;
-        background-color: @red;
+        background-color: red;
     }
 }
 
@@ -44,29 +44,29 @@
     background: transparent;
     text-shadow: 1px 1px @crust;
     color: @text;
-    font-family: Fira Code, Noto Sans, sans-serif;
+    font-family: Fira Code, FiraCode Nerd Font Propo;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
     font-size: 16px;
 }
 
 /* Each module */
 #custom-arch,
+#launch,
+#custom-power,
 #hardware,
-#hardware2,
 #indicators,
-#time,
-#mpd,
+#clock,
 #window,
+#wireplumber,
 #workspaces,
 #language,
-#taskbar,
-#tray {
+#tray-drawer {
   border-radius: 10px;
   background-color: alpha(@base, 0.8);
   margin-top: 5px;
   margin-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-right: 10px;
 }
 
@@ -74,7 +74,26 @@
  * Module styles
  * -------------------------------------------------------------------------- */
 
+#hardware {
+      color: @pink;
+}
+
+#backlight {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#backlight.medium {
+     color: @peach;
+}
+
+#backlight.max {
+     color: @yellow;
+}
+
 #battery {
+    padding-left:5px;
+    padding-right:5px;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -104,12 +123,26 @@
     animation-duration: 2s;
 }
 
-#time {
-  /* No styles */
+#battery.full{
+   color: @green;
+}
+
+#bluetooth {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+#bluetooth.connected {
+   color: @blue;
 }
 
 #cpu {
-  /* No styles */
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#cpu.loaded {
+    color: @sapphire;
 }
 
 #cpu.warning {
@@ -120,10 +153,38 @@
     color: @red;
 }
 
+#disk {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#disk.half {
+  color: @sapphire;
+}
+
+#disk.three-quarters {
+  color: @peach;
+}
+
+#disk.full {
+  color: @red;
+}
+
+#language {
+ color: @teal;
+}
+
+#clock {
+  color: @sky;
+}
+
 #memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#memory.loaded {
+    color: @sapphire;
 }
 
 #memory.warning {
@@ -132,43 +193,39 @@
 
 #memory.critical {
     color: @red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
 }
 
 #network {
-    /* No styles */
+    padding-left:5px;
+    padding-right:5px;
+    color: @rosewater;
 }
 
 #network.disconnected {
     color: @peach;
 }
 
-#pulseaudio {
-    /* No styles */
-}
-
-#pulseaudio.muted {
-    /* No styles */
-}
-
 #wireplumber {
     /* No styles */
 }
 
+#wireplumber.loud {
+     color: @red;
+}
+
+#wireplumber.optimal {
+     color: @green;
+}
+
 #wireplumber.muted {
-    /* No styles */
+     color: grey;
  }
 
 #tray {
-    /* No styles */
+     margin-right: 10px;
 }
 
 #window {
-    /* No styles */
-}
-
-window#waybar.empty #window {
     border: none;	
     color: transparent;
     background-color: transparent;
@@ -176,9 +233,8 @@ window#waybar.empty #window {
 }
 
 window#waybar.fullscreen #window {
-   border-color: @base;
-   color: @base;
-   background-color: @text;
+   color: @yellow;
+   background-color: alpha (@base, 0.8);
    text-shadow: none;
 }
 
@@ -211,5 +267,52 @@ window#waybar.fullscreen #window {
 }
 
 #custom-arch {
- /* margin-left: 20px;*/
+  color: @blue;
+}
+
+#custom-power {
+  color: @maroon;
+}
+
+#custom-terminal {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @mauve;
+}
+
+#custom-browser {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @teal;
+}
+
+#custom-launcher {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @flamingo;
+}
+
+#custom-filemanager {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @sky;
+}
+
+/*tooltips styling*/
+tooltip {
+     border-radius: 10px;
+     background-color: @base;
+}
+
+tooltip label {
+  color: @text;
+}
+
+menu {
+	border-radius: 10px;
+	background: @base;
+	color: @text;
+}
+menuitem {
+	border-radius: 10px;
 }
