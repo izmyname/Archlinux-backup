@@ -70,7 +70,7 @@ mpc
 mpd
 mpv
 neovim
-network-manager-applet
+networkmanager
 nfs-utils
 noto-fonts
 noto-fonts-emoji
