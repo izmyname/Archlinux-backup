@@ -1,3 +1,13 @@
+<details>
+  <summary>Screenshots</summary>
+  
+![desktop](https://github.com/izmyname/Archlinux-backup/blob/main/screenshots/1.png?raw=true "desktop")
+![calendar](https://github.com/izmyname/Archlinux-backup/blob/main/screenshots/2.png?raw=true "calendar")
+![windows](https://github.com/izmyname/Archlinux-backup/blob/main/screenshots/3.png?raw=true "windows")
+![launcher](https://github.com/izmyname/Archlinux-backup/blob/main/screenshots/4.png?raw=true "launcher")
+
+</details>
+
 <b>Theme:</b> <i>catppuccin-mocha</i>
 
 <b>Firefox theme(mocha variant):</b> https://github.com/catppuccin/firefox
@@ -8,10 +18,11 @@
 
 <b>Enable icons for nnn file manager:</b> inside PKGBUILD add O_NERD=1 under build section.
 
-
-`build() {`
-  `cd nnn`
- ` make O_NERD=1`
-`}`
+```
+build() {
+  cd nnn
+  make O_NERD=1
+}
+```
 
 <b>Set wallpaper/lockscreen:</b> ln -sf /path/to/wallpaper.png ~/.local/share/wallpaper, then - reload hyprpaper (mod+shift+r, by default)
