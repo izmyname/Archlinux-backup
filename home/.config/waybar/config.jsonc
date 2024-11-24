@@ -36,7 +36,8 @@
        "custom/terminal",
        "custom/browser",
        "custom/launcher",
-       "custom/filemanager"
+       "custom/filemanager",
+       "custom/fzmp"
     ],
   },
 
@@ -251,6 +252,13 @@
       "tooltip": true,
       "tooltip-format": "Launch File Manager",
       "on-click": "$TERMINAL -T nnn $HOME/.local/bin/nwrap"
+    },       
+
+"custom/fzmp": {
+      "format": "",
+      "tooltip": true,
+      "tooltip-format": "Launch MPD-FZF script",
+      "on-click": "$TERMINAL -T fzmp $HOME/.local/bin/fzmp"
     },       
 
 "custom/hide-tray": {
