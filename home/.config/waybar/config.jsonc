@@ -14,15 +14,15 @@
         "hyprland/workspaces",
         "hyprland/window"
             ],
-    //"modules-center": [
-    //],
+    "modules-center": [
+        "clock"
+    ],
     "modules-right": [
         "group/tray-drawer",
         "hyprland/language",
         "wireplumber",
 	      "group/indicators",
         "group/hardware",
-        "clock",
         "custom/power"
             ],
 
