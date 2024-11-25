@@ -1,0 +1,284 @@
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+    "position": "top",
+    "height": 45,
+    "margin-left": 20,
+    "margin-right": 10,
+    "modules-left": [
+        "custom/arch",
+	      "group/launch",
+        "hyprland/workspaces",
+        "hyprland/window"
+            ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "group/tray-drawer",
+        "hyprland/language",
+        "wireplumber",
+	      "group/indicators",
+        "group/hardware",
+        "custom/power"
+            ],
+
+    // -------------------------------------------------------------------------
+    // Module Groups
+    // -------------------------------------------------------------------------
+
+"group/launch": {
+  "orientation": "inherit",
+    "modules": [
+       "custom/terminal",
+       "custom/browser",
+       "custom/launcher",
+       "custom/filemanager",
+       "custom/fzmp"
+    ],
+  },
+
+"group/hardware": {
+	"orientation": "inherit",
+		"modules": [
+			"memory",
+			"cpu",
+			"disk"
+		]
+	},
+
+"group/indicators":{
+	"orientation": "inherit",
+    "modules": [
+	   "bluetooth",
+     "network",
+	   "backlight",
+     "battery"
+	     ]
+	},
+
+ "group/tray-drawer":{
+  "orientation": "inherit",
+  "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": false,
+        "click-to-reveal": true
+    },
+    "modules": [
+       "custom/hide-tray", 
+       "tray"
+    ],
+  },
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+"hyprland/language": {
+    "format": " {}",
+    "format-en": "en",
+    "format-ru": "ru",
+    "keyboard-name": "at-translated-set-2-keyboard",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+},
+
+"bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+  	"format": "󰂯",
+	  "format-disabled": "", // an empty format will hide the module
+  	"format-connected": "",
+  	"tooltip-format": "{controller_alias}\t{controller_address}",
+  	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+  	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+},
+
+"disk": {
+    "interval": 5,
+    "format": " ",
+    "path": "/",
+    "states": {
+        "half": 50,
+        "three-quarters": 75,
+        "full": 90
+    },
+},
+
+"backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
+    "states": {
+       "max": 100,
+       "medium": 60
+},
+    "tooltip": true,
+    "tooltip-format": "{percent}%"
+},
+
+"battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "󱐋{icon}", // Icon: bolt
+        "format-discharging": "{icon}",
+        "format-full": "󰂄",
+        "format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "tooltip": true,
+        "tooltip-format": "{capacity}%, {timeTo}"
+    },
+
+"clock": {
+        "interval": 1,
+        "format": " {:%H:%M}",
+        "format-alt": " {:L%a %d %b}", // Icon: calendar-alt 
+        "format-alt-click": "click-left",
+        "tooltip": true,
+       "tooltip-format": "<tt><span size='12pt'>{calendar}</span></tt>",
+       "calendar": {
+         "mode"          : "month",
+         "mode-mon-col"  : 3,
+         "weeks-pos"     : "right",
+         "on-scroll"     : 1,
+         "format": {
+         "months":     "<span color='#cdd6f4'><b>{}</b></span>",
+         "days":       "<span color='#b4befe'><b>{}</b></span>",
+         "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",
+         "weekdays":   "<span color='#fab387'><b>{}</b></span>",
+         "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
+          }
+    },
+        "actions":  {
+         "on-click-right": "mode"
+          }
+    
+    },
+
+"cpu": {
+        "interval": 5,
+        "format": "", // Icon: microchip
+        "states": {
+          "loaded": 40,
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+"memory": {
+        "interval": 5,
+        "format": " ", // Icon: memory
+        "states": {
+          "loaded": 40,
+          "warning": 70,
+          "critical": 90
+        },
+       "tooltip":true,
+       "tooltip-format": "{used:0.1f}GiB used ({percentage}%)"
+    },
+
+"network": {
+        "interval": 5,
+        "format-wifi": "", // Icon: wifi
+        "format-ethernet": "", // Icon: ethernet
+        "format-disconnected": "⚠",
+        "tooltip-format": "{ifname}:{essid} {ipaddr}"
+    },
+
+"hyprland/window": {
+        "format": ""
+    },
+
+"hyprland/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+
+"tray": {
+        "icon-size": 20,
+        "spacing": 5,
+        "reverse-direction": true
+    },
+
+"wireplumber": {
+    "format": "{icon}",
+    "format-muted": "",
+    "states": {
+        "loud": 70,
+        "optimal": 45
+    },
+    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "flatpak run org.pipewire.Helvum",
+    "on-click-middle": "flatpak run com.github.wwmm.easyeffects ",
+    "max-volume": 100,
+    "format-icons": ["", "", ""],
+    "tooltip": true,
+    "tooltip-format": "{node_name}  {volume}%"
+  },
+
+"custom/arch": {
+      "format": "",
+      "tooltip": false,
+    },       
+
+"custom/terminal": {
+      "format": "",
+      "tooltip": true,
+      "tooltip-format": "Launch Terminal Emulator",
+      "on-click": "$TERMINAL"
+    },       
+
+"custom/browser": {
+      "format": "󰖟",
+      "tooltip": true,
+      "tooltip-format": "Launch Web Browser",
+      "on-click": "$BROWSER"
+    },       
+
+"custom/launcher": {
+      "format": "󱓞",
+      "tooltip": true,
+      "tooltip-format": "Launch Application Launcher",
+      "on-click": "fuzzel"
+    },       
+
+"custom/filemanager": {
+      "format": "󱞊",
+      "tooltip": true,
+      "tooltip-format": "Launch File Manager",
+      "on-click": "$TERMINAL -T nnn $HOME/.local/bin/nwrap"
+    },       
+
+"custom/fzmp": {
+      "format": "",
+      "tooltip": true,
+      "tooltip-format": "Launch MPD-FZF script",
+      "on-click": "$TERMINAL -T fzmp $HOME/.local/bin/fzmp"
+    },       
+
+"custom/hide-tray": {
+     "format": "",
+     "format-alt-click": "click-left",
+     "tooltip": true,
+     "tooltip-format": "Expand tray"
+},
+
+    "custom/power": {
+        "format" : "⏻",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml",
+		"menu-actions": {
+      "lock": "loginctl lock-session",
+      "logout": "loginctl terminate-user '' ",
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"suspend": "systemctl suspend",
+		},
+},
+}

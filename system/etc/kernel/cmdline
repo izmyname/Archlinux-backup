@@ -1,0 +1,1 @@
+init=/usr/lib/systemd/systemd  nvme_loid=YES cryptdevice=/dev/nvme0n1p2:x:allow-discards root=UUID=c1ce2b90-f1d2-4778-afd6-e86f00eebbb8 rootflags=subvol=@ rw quiet bgrt_disable 

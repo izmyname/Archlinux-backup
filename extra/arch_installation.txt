@@ -1,0 +1,27 @@
+I. pacstrap -k base /mnt/
+
+II. arch-chroot:pacman-key --init, then pacman-key --populate, then pacman -Syyu - < pkglist.txt
+
+III. set localtime:
+
+ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+
+ hwclock --systohc
+
+IV. set root password: passwd root
+
+V. create non-privileged user:
+
+useradd -m -G wheel,network,video,audio -s /usr/bin/zsh username
+
+passwd username 
+
+VI. /etc/locale.gen - uncomment needed locales, then run locale-gen
+
+VII. generate and edit /etc/fstab and edit /etc/kernel/cmdline
+
+VIII. as user - yay -Y --devel --save && yay -S --needed - < pkglist-AUR.txt
+
+IX. as user - chmod +x ~/.local/bin/*
+
+X. enable services, configure mullvad,setup ufw and create uefi boot entry. Create snapper config

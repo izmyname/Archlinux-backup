@@ -1,0 +1,324 @@
+@import "mocha.css";
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+    70% {
+        color: @text;
+    }
+
+    to {
+        color: @text;
+        background-color: @peach;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @text;
+    }
+
+    to {
+        color: @text;
+        background-color: red;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    border-radius: 10px;
+    background: transparent;
+    text-shadow: 1px 1px @crust;
+    color: @text;
+    font-family: Fira Code, FiraCode Nerd Font Propo;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    font-size: 16px;
+}
+
+/* Each module */
+#custom-arch,
+#launch,
+#custom-power,
+#hardware,
+#indicators,
+#clock,
+#window,
+#wireplumber,
+#workspaces,
+#language,
+#tray-drawer {
+  border-radius: 10px;
+  background-color: alpha(@base, 0.8);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#hardware {
+      color: @pink;
+}
+
+#backlight {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#backlight.medium {
+     color: @peach;
+}
+
+#backlight.max {
+     color: @yellow;
+}
+
+#battery {
+    padding-left:5px;
+    padding-right:5px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    border-radius: 10px; 
+    margin-top: 2px;    
+    margin-bottom: 2px; 
+    color: @peach;
+}
+
+#battery.critical {
+    border-radius: 10px; 
+    margin-top: 2px;    
+    margin-bottom: 2px; 
+    color: @red;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#battery.full{
+   color: @green;
+}
+
+#bluetooth {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+#bluetooth.connected {
+   color: @blue;
+}
+
+#cpu {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#cpu.loaded {
+    color: @sapphire;
+}
+
+#cpu.warning {
+    color: @peach;
+}
+
+#cpu.critical {
+    color: @red;
+}
+
+#disk {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#disk.half {
+  color: @sapphire;
+}
+
+#disk.three-quarters {
+  color: @peach;
+}
+
+#disk.full {
+  color: @red;
+}
+
+#language {
+ color: @teal;
+}
+
+#clock {
+  color: @sky;
+}
+
+#memory {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#memory.loaded {
+    color: @sapphire;
+}
+
+#memory.warning {
+    color: @peach;
+}
+
+#memory.critical {
+    color: @red;
+}
+
+#network {
+    padding-left:5px;
+    padding-right:5px;
+    color: @rosewater;
+}
+
+#network.disconnected {
+    color: @peach;
+}
+
+#wireplumber {
+    /* No styles */
+}
+
+#wireplumber.loud {
+     color: @red;
+}
+
+#wireplumber.optimal {
+     color: @green;
+}
+
+#wireplumber.muted {
+     color: grey;
+ }
+
+#tray {
+     margin-right: 10px;
+}
+
+#window {
+    border: none;	
+    color: transparent;
+    background-color: transparent;
+    text-shadow: none;
+}
+
+window#waybar.fullscreen #window {
+   color: @yellow;
+   background-color: alpha (@base, 0.8);
+   text-shadow: none;
+}
+
+#workspaces button {
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: @text;
+    text-shadow: 1px 1px @crust;
+}
+
+#workspaces button.active {
+    border-radius: 10px;
+    margin-top: 2px;    
+    margin-bottom: 2px; 
+    border-color: @text;
+    color: @base;
+    background-color: @text; 
+    text-shadow: none;
+}
+
+#workspaces button.urgent {
+    border-radius: 10px;
+    margin-top: 2px;    
+    margin-bottom: 2px; 
+    border-color: @peach;
+    color: @base;
+    background-color: @red;
+    text-shadow: none;
+}
+
+#custom-arch {
+  color: @blue;
+}
+
+#custom-power {
+  color: @maroon;
+}
+
+#custom-terminal {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @mauve;
+}
+
+#custom-browser {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @teal;
+}
+
+#custom-launcher {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @flamingo;
+}
+
+#custom-filemanager {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @sky;
+}
+
+#custom-fzmp {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @rosewater;
+}
+
+/*tooltips styling*/
+tooltip {
+     border-radius: 10px;
+     background-color: alpha (@base, 0.8);
+}
+
+tooltip label {
+  color: @text;
+}
+
+menu {
+	border-radius: 10px;
+	background: alpha (@base, 0.8);
+	color: @text;
+}
+menuitem {
+	border-radius: 10px;
+}
