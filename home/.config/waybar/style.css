@@ -307,7 +307,7 @@ window#waybar.fullscreen #window {
 /*tooltips styling*/
 tooltip {
      border-radius: 10px;
-     background-color: @base;
+     background-color: alpha (@base, 0.8);
 }
 
 tooltip label {
@@ -316,7 +316,7 @@ tooltip label {
 
 menu {
 	border-radius: 10px;
-	background: @base;
+	background: alpha (@base, 0.8);
 	color: @text;
 }
 menuitem {

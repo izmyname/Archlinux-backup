@@ -139,7 +139,7 @@
         "format-alt": " {:L%a %d %b}", // Icon: calendar-alt 
         "format-alt-click": "click-left",
         "tooltip": true,
-       "tooltip-format": "<tt><small>{calendar}</small></tt>",
+       "tooltip-format": "<tt><span size='12pt'>{calendar}</span></tt>",
        "calendar": {
          "mode"          : "month",
          "mode-mon-col"  : 3,
